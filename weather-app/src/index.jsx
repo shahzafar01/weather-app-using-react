@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css'
 
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -43,10 +44,10 @@ function Hi() {
     }
     getWeather();
 },[])
-    return <div>
+    return <div id='container'>
         
         <h1>
-            Weather App :
+            Weather App
         </h1>
         <form onSubmit={submitHandler}>
 
@@ -57,16 +58,19 @@ function Hi() {
                 setCityName(e.target.value)
             }}
             />
-
-            <button type="submit">Get Weather</button>
+<br />
+<br />
+            <button type="submit"><b>Get Weather</b></button>
             </form>
 
             <br />
             {(weather?.name)?
 
-            <div>
-                <div>Weather of {weather?.name}</div>
-                <div>Current Temp {weather?.main?.temp}</div>
+            <div id='resultbox'>
+                <div id='result'>Weather of {weather?.name}</div>
+                <div id='result'>Current Temp {weather?.main?.temp}</div>
+                <div id='result'>Temp Max {weather?.main.temp_max}</div>
+                <div id='result'>Temp Max {weather?.main.temp_min}</div>
             </div>
             :
             null
