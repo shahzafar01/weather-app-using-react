@@ -28,10 +28,12 @@ text{
   text-align: center;
   align-items: center;
   display: flex;
-  margin: auto;
+  margin: 1ch;
   font-size: 200%;
   font-stretch: condensed;
   text-decoration: underline;
   border-spacing: 10vh;
+  background-color: rgb(195, 228, 250);
+  border: 10ch;
   
 }
